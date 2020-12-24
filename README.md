@@ -1,12 +1,12 @@
-#Win10子系统 Ubuntu 18.04配置nginx+laravelS
-####一. 配置环境
+# Win10子系统 Ubuntu 18.04配置nginx+laravelS
+#### 一. 配置环境
 1. php 7.4.13
 2. swoole 4.5.9
 3. nginx 1.14.0
 4. laravel 7.30.1
 5. laravelS 3.7.10
 6. composer 1.6.3
-####二. 配置步骤
+#### 二. 配置步骤
 1. 使用apt安装nginx、php、composer
 2. 安装php-pear、php-dev扩展
 3. 安装swoole：`pecl install swoole`，在php.ini中添加`extension=swoole.so`
