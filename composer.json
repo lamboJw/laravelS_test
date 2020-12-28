@@ -14,7 +14,8 @@
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
         "hhxsv5/laravel-s": "^3.7",
         "laravel/framework": "^7.29",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "ext-posix": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
