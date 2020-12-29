@@ -223,7 +223,15 @@ return [
     |
     */
 
-    'swoole_tables' => [],
+    'swoole_tables' => [
+        'websocket' => [// 表名，会加上 Table 后缀，比如这里是 websocketTable
+            'size' => 102400,
+            'column' => [
+                ['name' => 'fd', 'type' => Swoole\Table::TYPE_INT, 'size' => 8],
+                ['name' => 'nickname', 'type' => Swoole\Table::TYPE_STRING, 'size' => 10],
+            ],
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------

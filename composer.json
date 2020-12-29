@@ -15,7 +15,10 @@
         "hhxsv5/laravel-s": "^3.7",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
-        "ext-posix": "*"
+        "ext-posix": "*",
+        "ext-redis": "*",
+        "ext-pdo": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

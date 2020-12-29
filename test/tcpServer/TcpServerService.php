@@ -88,7 +88,6 @@ abstract class TcpServerService
     {
         while (true) {
             $conn = stream_socket_accept($this->socket, -1);
-//            call_user_func($this->onConnect, $conn);
             $this->onConnect($conn);
             //客户端传输的所有消息
             $full_msg = '';
@@ -100,7 +99,6 @@ abstract class TcpServerService
                 $buffer_msg = fread($conn, 1024);
                 if ($buffer_msg === false || $buffer_msg === '') {
                     //执行关闭进程前操作
-//                    call_user_func($this->onClose, $conn);
                     $this->onClose($conn);
                     //读取消息完，退出当前循环，等待下一个客户端连接
                     break;
@@ -110,7 +108,6 @@ abstract class TcpServerService
                     $full_msg .= $buffer_msg;
                 } else {  //读取完成
                     $full_msg .= trim(substr($buffer_msg, 0, $pos + 1));
-//                    call_user_func($this->onMessage, $conn, $full_msg);
                     $this->onMessage($conn, $full_msg);
                     if ($full_msg == "quit") {
                         echo "客户端发出退出指令\n";
